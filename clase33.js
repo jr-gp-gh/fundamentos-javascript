@@ -8,7 +8,7 @@ function obtenerPersonaje(id) {
         const url = `${API_URL}${PEOPLE_URL.replace(':id', id)}`
         $
         .get(url, opts, function (data){
-            resolve(data) //resolver la promesa
+            resolve(data) //resolver la promesa y no sel lama hasta que el get sea exitoso
         })
         .fail(() => reject(id))
     })
