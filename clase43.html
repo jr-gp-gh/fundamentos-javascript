@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Clase43 - Cambiando el contecto al llamar a auna función</title>
+</head>
+<body>
+    <script>
+        const sacha = {
+           nombre: 'Sacha',
+           apellido: 'Lifszyc',
+        }
+       
+        const yesika = {
+           nombre: 'Yesika',
+           apellido: 'Córtes',
+        }
+
+        function saludar(saludo = 'Hola') {
+            console.log(`${saludo}, mi nombre es ${this.nombre}`)
+        }
+        
+        // saludar()
+      
+        // const saludarASacha = saludar.bind(sacha)
+       
+        // saludarASacha()
+        // const saludarAYesika = saludar.bind(yesika)
+        // saludarAYesika()
+
+        setTimeout(saludar.bind(sacha, '0. Hola che'), 10)
+
+        //No se ejecuta
+        saludar.bind(sacha, '1. Hola che')
+
+        saludar.call(sacha, '2. Hola che')
+
+        //Es diferente al call ya que los parametros se mandan comoa arreglo
+        saludar.apply(sacha, ['3. Hola che'])
+    </script>
+</body>
+</html>
