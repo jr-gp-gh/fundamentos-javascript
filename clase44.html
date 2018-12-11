@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Clase44 - ¿Cuándo hace falta poner el punto y coma al final de la línea?</title>
+</head>
+<body>
+    <script>
+        alert('hola');
+        var nombre = 'Sacha'
+        // const saludarASacha = function () { .... }
+
+        function saludar() {
+            console.log('kjhkhgkgkdfj')
+        }; //<-- inecesario
+
+        for (var i = 0; i < 10; i++) {
+
+        }; //<-- inecesario
+
+        //Casos necesarios
+        console.log('Hola mi nombre es Sacha'); //<-- necesario antes de un array
+        [1, 2, 3].forEach(n => console.log(n * 2));
+
+        const nombre = 'Sacha'
+        console.log('Hola mi nombre es Sacha'); //<-- necesario antes de `
+        `${nombre} es un desarrollador`        
+
+        function calcularDoble(numero) {
+            return { //<-- con enter aqui marca error antes de {
+                original: numero, doble: numero * 2
+            }
+        }
+
+    </script>
+</body>
+</html>
